@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Providers;
+use App\Models\Folder;
+use App\Policies\FolderPolicy;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
@@ -12,9 +14,9 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @var array<class-string, class-string>
      */
-    protected $policies = [
-        // 'App\Models\Model' => 'App\Policies\ModelPolicy',
-    ];
+   protected $policies = [
+     Folder::class => FolderPolicy::class,
+   ];
 
     /**
      * Register any authentication / authorization services.
