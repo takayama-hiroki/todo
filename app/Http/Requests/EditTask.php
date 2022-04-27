@@ -6,7 +6,7 @@ use App\Models\Task;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class EditTask extends FormRequest
+class EditTask extends CreateTask
 {
     /**
      * Determine if the user is authorized to make this request.
